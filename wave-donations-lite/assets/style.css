@@ -1,0 +1,359 @@
+/* Wave Donations Lite - Styles Frontend */
+
+.wdl-donation-form-container {
+    margin: 0 auto;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.wdl-form-title {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+/* Section des montants prédéfinis */
+.wdl-amount-section {
+    margin-bottom: 25px;
+}
+
+.wdl-amount-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.wdl-amount-btn {
+    padding: 12px 16px;
+    border: 2px solid #e74c3c;
+    background: transparent;
+    color: #e74c3c;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.wdl-amount-btn:hover,
+.wdl-amount-btn.active {
+    background: #e74c3c;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(231, 76, 60, 0.3);
+}
+
+/* Champs de formulaire */
+.wdl-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.wdl-input,
+.wdl-textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.wdl-input:focus,
+.wdl-textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.wdl-field-group {
+    margin-bottom: 20px;
+}
+
+.wdl-custom-amount-section,
+.wdl-donor-section,
+.wdl-message-section {
+    margin-bottom: 25px;
+}
+
+.wdl-section-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+.wdl-help-text {
+    display: block;
+    margin-top: 5px;
+    color: #7f8c8d;
+    font-size: 12px;
+}
+
+#wdl_donor_name,
+#wdl_donor_email,
+#wdl_donor_phone {
+    padding: 12px 16px;
+}
+
+/* Bouton de soumission */
+.wdl-submit-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.wdl-submit-btn {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+}
+
+.wdl-submit-btn:hover:not(:disabled) {
+    background: linear-gradient(135deg, #c0392b, #a93226);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.4);
+}
+
+.wdl-submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.wdl-loading {
+    margin-top: 15px;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Messages */
+.wdl-messages {
+    margin-top: 20px;
+}
+
+.wdl-message {
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.wdl-message.success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.wdl-message.error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.wdl-message.warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+/* Pages de succès et d'échec */
+.wdl-success-container,
+.wdl-failed-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    text-align: center;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.wdl-success-icon,
+.wdl-failed-icon {
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.wdl-success-title,
+.wdl-failed-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.wdl-success-message,
+.wdl-failed-message {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.wdl-donation-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.wdl-donation-details h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.wdl-donation-details p {
+    margin: 8px 0;
+    color: #495057;
+}
+
+.wdl-success-actions,
+.wdl-failed-actions {
+    margin-top: 25px;
+}
+
+.wdl-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin: 0 5px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+}
+
+.wdl-btn-primary {
+    background: #3498db;
+    color: white;
+}
+
+.wdl-btn-primary:hover {
+    background: #2980b9;
+    color: white;
+    text-decoration: none;
+}
+
+.wdl-btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+.wdl-btn-secondary:hover {
+    background: #7f8c8d;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .wdl-donation-form-container {
+        padding: 20px 15px;
+        margin: 0 10px;
+    }
+    
+    .wdl-amount-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .wdl-form-title {
+        font-size: 24px;
+    }
+    
+    .wdl-submit-btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 16px;
+    }
+    
+    .wdl-success-container,
+    .wdl-failed-container {
+        margin: 0 10px;
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wdl-amount-buttons {
+        grid-template-columns: 1fr;
+    }
+    
+    .wdl-btn {
+        display: block;
+        margin: 5px 0;
+        text-align: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.wdl-donation-form-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* États de validation */
+.wdl-input.error {
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.wdl-input.success {
+    border-color: #27ae60;
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.wdl-error-text {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Loader */
+.wdl-spinner {
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
